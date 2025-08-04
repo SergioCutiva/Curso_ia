@@ -23,6 +23,11 @@ y escriba S
 | Panel     | Similar a un diccionario de DataFrame         |
 
 # Creación de objetos Series
+git commit -m "introducción a pandas 5%"
+si sale error
+# Creación de objetos Series
+git config --global user.email "you@example.com"
+git config --global user.name "user"
 ```
 # Creación de objeto Serie
 s = pd.Series([2,4,6,8,10])
@@ -32,3 +37,7 @@ print(s)
 
 manejo de git
 >git init
+
+# Creación de objetos Series
+crear archivo requirements.txt
+pip freeze > requirements.txt
