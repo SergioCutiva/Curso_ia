@@ -41,3 +41,10 @@ manejo de git
 # Creación de objetos Series
 crear archivo requirements.txt
 pip freeze > requirements.txt
+
+clonar repositorio
+https://github.com/SergioCutiva/Curso_ia
+
+como desactivar el entorno virtual
+>deactivate
+
