@@ -1,0 +1,34 @@
+# Comandos 
+```
+python --version
+python 3.13.5
+git --version
+https://git-scm.com
+pip list
+python.exe -m pip install --upgrade pip
+```
+## Crear entorno virtual
+python -m venv env
+## Activar entorno
+env\scripts\activate
+Si no activa ejecute en el powershell (como administrador)
+set-ExecutionPolicy Unrestricted
+y escriba S
+
+# Estructura de datos en Pandas
+| Tipo      | Contenido                                     |
+| --------- | --------------------------------------------- |
+| Series    | Array de una dimensión                        |
+| DataFrame | Se corresponde con una tabla de 2 dimensiones |
+| Panel     | Similar a un diccionario de DataFrame         |
+
+# Creación de objetos Series
+```
+# Creación de objeto Serie
+s = pd.Series([2,4,6,8,10])
+print(s)
+
+```
+
+manejo de git
+>git init
