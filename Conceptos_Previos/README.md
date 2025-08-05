@@ -48,3 +48,5 @@ https://github.com/SergioCutiva/Curso_ia
 como desactivar el entorno virtual
 >deactivate
 
+Recuperar librerias
+pip install -r requirements.txt
