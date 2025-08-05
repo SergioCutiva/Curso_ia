@@ -5,6 +5,8 @@ python 3.13.5
 # Creación de objeto Serie
 ```
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 s = pd.Series([2,4,6,8,10])
 print(s)
 # Creación de un objeto Serie inicializando con un diccionario de python

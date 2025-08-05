@@ -51,3 +51,6 @@ como desactivar el entorno virtual
 
 Recuperar librerias
 pip install -r requirements.txt
+
+Instalar libreria matplot
+>pip install matplotlib
