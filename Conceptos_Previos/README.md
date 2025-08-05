@@ -30,6 +30,7 @@ git config --global user.email "you@example.com"
 git config --global user.name "user"
 ```
 # Creación de objeto Serie
+import pandas as pd
 s = pd.Series([2,4,6,8,10])
 print(s)
 
