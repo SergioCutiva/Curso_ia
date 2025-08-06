@@ -69,3 +69,36 @@ def func(x, y):
     return (x +2) *y
 i = np.fromfunction(func, (3, 5), dtype=int)
 print(i)
+
+# Accesos a los elementos de un array
+array_uni = np.array([1,3,5,7,9,11])
+print("shape:", array_uni.shape)
+print("array_uni:", array_uni)
+
+# Acceso al quinto elemento
+print("Quinto elemento:", array_uni[4])
+
+# Accediendo a los elementos 0,3 y 5 del array
+print("Elementos 0, 3 y 5:", array_uni[[0, 3, 5]])
+
+# Array multidimensional
+array_multi = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print("Array multidimensional:\n", array_multi)
+
+# Accediendo al cuarto elemento del array multidimensional
+print("Cuarto elemento del array multidimensional:", array_multi[1, 0])
+# Accediendo a la segunda fila del array multidimensional
+print("Segunda fila del array multidimensional:", array_multi[1, :])
+# Accediendo al tercer elemento de las dos primeras filas
+print("Tercer elemento de las dos primeras filas:\n", array_multi[0:2, 2])
+# Modificación de un array
+# Creaar un array unidimensional inicializando un rango de elementos del 0 al 27
+array1 = np.arange(24)
+print("Array original:", array1)
+print("Shape del array original:", array1.shape)
+
+# Camnbiar las dimensiones del array y sus longitudes
+array2 = array1.reshape(6,4)
+print("Array modificado:\n", array2)
+print("Shape del array modificado:", array2.shape)
+
