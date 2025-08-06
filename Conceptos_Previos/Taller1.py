@@ -49,13 +49,17 @@ print(estudiantes_buenos)
 estudiantes_buenos2 = df.query("promedio >= 4.0")
 print(estudiantes_buenos2)
 
+
 # Pregunta: ¿Cuántos estudiantes tienen un buen promedio?
 cantidad_buenos = estudiantes_buenos.shape[0]
 print(f"Cantidad de estudiantes con buen promedio: {cantidad_buenos}")
 
 cantidad_buenos2 = df.query("promedio >= 4.0").shape[0]
 print(f"Cantidad de estudiantes con buen promedio: {cantidad_buenos2}")
-
+# Calcula operaciones estadísticas básicas sobre las columnas numéricas del DataFrame
+estadisticas = df.describe()
+print("Estadísticas básicas del DataFrame:")
+print(estadisticas)
 #Agrega una nueva columna que indique si el estudiante es mayor de edad
 
 df["mayor_de_edad"] = df["edad"] >= 18
