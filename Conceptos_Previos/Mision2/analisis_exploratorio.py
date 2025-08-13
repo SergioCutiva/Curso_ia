@@ -55,7 +55,7 @@ sns.histplot(titanic['Age'],bins=30,color='skyblue')
 plt.title("Frecuencia de la edad de los pasajeros")
 plt.xlabel("Edad")
 plt.ylabel("Frecuencia")
-plt.show()
+#plt.show()
 
 # Diagram de cajas de la edad por la clase
 plt.figure(figsize=(8,5))
@@ -63,7 +63,7 @@ sns.boxplot(x='Pclass', y='Age',data=titanic,palette='Set2')
 plt.title("Distribucion de la edad por clase")
 plt.xlabel("Clase")
 plt.ylabel("Edad")
-plt.show()
+#plt.show()
 
 # Diagrama de correlación seleccionado solo las columnas numericas
 df_numerico = titanic.select_dtypes(include='number')
@@ -73,17 +73,17 @@ sns.heatmap(correlacion_matriz,annot=True,cmap='coolwarm')
 plt.title("Distribucion de la edad por clase")
 plt.xlabel("Clase")
 plt.ylabel("Edad")
-plt.show()
+#plt.show()
 
 # Diagrama de sectires de fallecidos y sobrevivientes
 plt.figure()
 titanic.Survived.value_counts().plot(kind='pie',labels=['Muertos','Sobrevivientes'],title='Diagrama de torta de % de vivos y muertos',autopct='%1.1f%%')
-plt.show()
+#plt.show()
 
 # Diagrama de barras con el numero de personada de cada clase
 plt.figure()
 titanic.Pclass.value_counts().plot(kind='bar',title='Numero de personas por clase')
-plt.show()
+#plt.show()
 
 print('Dimensiones:', titanic.shape)
 print('Numero de elementos:',titanic.size)
@@ -94,3 +94,25 @@ print('Ultimas 10 filas:',titanic.tail(10))
 
 # Pasajero 148
 print(titanic.query('PassengerId == 148'))
+#print(f"el pasajero 148 es {titanic.loc[titanic['PassenegerId]==148]})
+# Mostrar por pantalla las filas pares del dataframe
+print(titanic.query('(index % 2) == 0'))
+#print(titanic.iloc[range(0,titanic.shape[0],2)])
+
+# Mostrar los nombres de las personas que iban en primera clase en orden alfabetico
+print(titanic.loc[titanic['Pclass']==1]['Name'].sort_values())
+
+# Mostar el % de las personas que sobrevivieron y murieron
+print(titanic['Survived'].value_counts()/titanic['Survived'].count())
+
+# Mostrar el % de personas que sobrevivieron en cada clase
+print(titanic.groupby('Pclass')['Survived'].value_counts(normalize=True))
+
+# Mostrar la edad media de las mujeres que viajaban en cada clase
+print(titanic.groupby(['Pclass','Sex'])['Age'].mean().unstack()['female'])
+
+# Añadir una nueva columna boleada para ver si es parajero es menor de edad 
+titanic['es_menor']= titanic['Age']<18
+
+# Mostar el % de menores y mayores de edad que sobrevivieron encada clase
+print(titanic.groupby(['Pclass','es_menor'])['Survived'].mean())
