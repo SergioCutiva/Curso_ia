@@ -116,3 +116,7 @@ titanic['es_menor']= titanic['Age']<18
 
 # Mostar el % de menores y mayores de edad que sobrevivieron encada clase
 print(titanic.groupby(['Pclass','es_menor'])['Survived'].mean())
+
+df = pd.DataFrame(titanic)
+
+print(df.describe())

@@ -13,3 +13,17 @@ ahorro_solar
 -README.md
 -modelo
   -modelo.py
+-templates
+ -formulario.html
+ -resultado.html
+-api
+ -index.py
+-static
+ -style.css
+
+ ## Librerias
+|Libreria|comando|
+|--------|-------|
+|Flask   |
+|pandas  | 
+|pickle  |
