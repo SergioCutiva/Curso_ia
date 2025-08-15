@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Predición de ahorro</title>
+       <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='favicon.ico')}}" type="image/x-icon">
+    </head>
 <body>
-    <h2>Predicción de ahorro</h2>
+
+    <div>
+
+    <h2>Predición de ahorro</h2>
 <p>El ahorro estimado mensual en tu factura es: <strong>${{prediccion}}</strong></p>
-   <a href="/">Volver</a>
+   <a href="/">Volver</a> 
+
+</div>
+
 </body>
 </html>

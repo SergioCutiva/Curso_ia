@@ -8,7 +8,7 @@ columnas=pickle.load(open(os.path.join(os.path.dirname(__file__),'../modelo/colu
 
 @app.route('/',methods=['GET'])
 def formulario():
-    return render_template('formular.html')
+    return render_template('formulario.html')
 @app.route('/predecir',methods=['POST'])
 def predecir():
     datos={
