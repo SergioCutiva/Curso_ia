@@ -9,6 +9,8 @@ wsl --install
 |------------|-------------------------|
 |transformers|pip install tranosformes |
 |torch       |pip install torch        |
+
+
 pip install huggingface_hub[hf_xet]
 
 ```
